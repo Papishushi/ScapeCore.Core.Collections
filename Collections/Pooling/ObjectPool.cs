@@ -16,11 +16,12 @@
  */
 
 using ScapeCore.Core.Batching.Tools;
-using Serilog;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Immutable;
 using System.Linq;
+
+using static ScapeCore.Traceability.Debug.Debugger;
 
 namespace ScapeCore.Core.Collections.Pooling
 {
@@ -38,7 +39,7 @@ namespace ScapeCore.Core.Collections.Pooling
 
         private static DeeplyMutableType GetError()
         {
-            Log.Warning("Object Pool item generator is null. Try setting up a generator.");
+            SCLog.Log(WARNING, "Object Pool item generator is null. Try setting up a generator.");
             return new(null);
         }
 
