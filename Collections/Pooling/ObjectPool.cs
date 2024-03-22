@@ -15,13 +15,13 @@
  * A typeless collection used for pooling objects and reusing them.
  */
 
-using ScapeCore.Core.Batching.Tools;
+using ScapeCore.Core.Tools;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Immutable;
 using System.Linq;
 
-using static ScapeCore.Traceability.Debug.Debugger;
+using static ScapeCore.Core.Debug.Debugger;
 
 namespace ScapeCore.Core.Collections.Pooling
 {
